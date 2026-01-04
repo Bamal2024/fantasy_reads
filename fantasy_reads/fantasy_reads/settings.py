@@ -112,6 +112,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'reads' / 'static']
 
+# Ruta donde collectstatic colocará los archivos para servir en producción
+# Requerida para despliegues en Render / cualquier servidor WSGI
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -123,6 +127,4 @@ GOOGLE_BOOKS_API_KEY = get_env_variable('GOOGLE_BOOKS_API_KEY')
 #redirecciona al index luego del login y logout
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
-from pathlib import Path
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
