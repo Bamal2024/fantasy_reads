@@ -1,0 +1,18 @@
+{% extends 'reads/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="bienvenida-card">
+    <h2>Iniciar sesión</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Entrar</button>
+    </form>
+    <p>
+        <a href="{% url 'password_reset' %}" class="button-link">
+            ¿Olvidaste tu contraseña?
+        </a>
+    </p>
+</div>
+{% endblock %}

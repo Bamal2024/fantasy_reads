@@ -1,0 +1,32 @@
+
+
+{% extends "reads/base.html" %}
+{% load static %}
+
+{% block title %}Noticias — Fantasy Reads{% endblock %}
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'reads/css/pages/noticias.css' %}">     
+<link rel="stylesheet" href="{% static 'reads/css/estilos.css' %}">
+   
+{% endblock %}
+
+<body>
+{% block content %}
+<div class="noticias-container">
+    {% for noticia in noticias %}
+<div class="noticia">
+    <img src="{% static noticia.imagen %}" alt="{{ noticia.titulo }}">
+    <div class="noticia-contenido">
+        <h3>{{ noticia.titulo }}</h3>
+        <p>{{ noticia.descripcion }}</p>
+        {% if noticia.enlace %}
+        <a href="{{ noticia.enlace }}" target="_blank">Leer más</a>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
+
+<script src="{% static 'reads/js/noticias.js' %}"></script>
+</body>

@@ -1,0 +1,33 @@
+{% extends "reads/base.html" %}
+{% load static %}
+
+{% block title %}Merchandising{% endblock %}
+
+{% block content %}
+<h1>{{ titulo_pagina }}</h1>
+
+<div class="productos-grid">
+    {% for producto in productos %}
+    <div class="product-card">
+        <div class="product-image">
+            {% if producto.imagen %}
+            <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+            {% else %}
+            <img src="{% static 'reads/images/no-image.png' %}" alt="Sin imagen">
+            {% endif %}
+        </div>
+        <div class="product-info">
+            <h3>{{ producto.nombre }}</h3>
+            <p>Tipo: {{ producto.tipo }}</p>
+            <p>Categoría: {{ producto.categoria.nombre }}</p>
+            <p>Precio: ${{ producto.precio }}</p>
+
+            <div class="button-group">
+                <a href="{% url 'en_construccion' %}" class="button-link">Comprar</a>
+                <a href="{% url 'producto-detail' producto.id %}" class="button-link">Ver más</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "admin/base_site.html" %}
+{% block title %}Categorías{% endblock %}
+
+{% block content %}
+<h1>Lista de Categorías</h1>
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for categoria in categorias %}
+        <tr>
+            <td>{{ categoria.id }}</td>
+            <td><a href="{% url 'categoria-detail' categoria.id %}">{{ categoria.nombre }}</a></td>
+            <td>{{ categoria.descripcion }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">No hay categorías registradas.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

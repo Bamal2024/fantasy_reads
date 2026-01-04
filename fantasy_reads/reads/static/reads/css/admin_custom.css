@@ -1,0 +1,178 @@
+/* ================================
+   Variables de colores
+   ================================ */
+:root {
+    --morado-fondo: #2b1a38;
+    --morado-claro: #9b59b6;
+    --morado-medio: #8e44ad;
+    --rosa-suave: #d29ce1;
+    --texto-principal: #ffffff;
+    --texto-secundario: #e0c7f2;
+    --borde-radio: 16px;
+}
+
+/* ================================
+   Fondo general y tipografía
+   ================================ */
+body {
+    background-color: var(--morado-fondo);
+    color: var(--texto-principal);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ================================
+   Cabecera del admin
+   ================================ */
+#header {
+    background: rgba(142, 68, 173, 0.85);
+    color: var(--texto-principal);
+    border-bottom: 2px solid var(--morado-claro);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+#header h1 a {
+    color: var(--rosa-suave);
+    text-decoration: none;
+}
+
+/* ================================
+   Sidebar
+   ================================ */
+#nav-sidebar,
+.app-list {
+    background: rgba(142, 68, 173, 0.75);
+    border-radius: var(--borde-radio);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.app-list h2 {
+    color: var(--rosa-suave);
+    font-weight: bold;
+}
+
+.app-list .model a {
+    color: var(--texto-principal);
+    display: block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.app-list .model a:hover {
+    background: rgba(155, 89, 182, 0.6);
+    color: var(--texto-principal);
+}
+
+/* ================================
+   Botones unificados con glass effect
+   ================================ */
+button,
+.submit-row input,
+.add-another,
+.deletelink,
+.button-link {
+    border-radius: 12px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: rgba(155, 89, 182, 0.85);
+    color: var(--texto-principal);
+    text-decoration: none;
+    border: none;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.submit-row input:hover,
+.add-another:hover,
+.deletelink:hover,
+.button-link:hover {
+    background: rgba(142, 68, 173, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ================================
+   Dashboard Cards
+   ================================ */
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.dashboard-cards a.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    background-color: rgba(150, 78, 163, 0.7);
+    color: var(--texto-principal);
+    border-radius: 16px;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    position: relative;
+}
+
+.dashboard-cards a.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    background: rgba(155, 89, 182, 0.85);
+}
+
+.dashboard-cards .icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.dashboard-cards h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.dashboard-cards .count {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* ================================
+   Inputs y selects
+   ================================ */
+input,
+select,
+textarea {
+    background: rgba(59, 42, 80, 0.8);
+    color: var(--texto-principal);
+    border-radius: 12px;
+    padding: 0.5rem;
+    border: 1px solid #5c3e7e;
+}
+
+/* ================================
+   Scrollbars
+   ================================ */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--morado-fondo);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--morado-claro);
+    border-radius: 10px;
+}

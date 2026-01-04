@@ -1,0 +1,146 @@
+[
+    {
+        "model": "reads.producto",
+        "pk": 1,
+        "fields": {
+            "nombre": "Disfraz de Dragón de Fourth Wing",
+            "tipo": "Disfraz",
+            "categoria": 2,
+            "precio": 49990,
+            "imagen": "https://i.etsystatic.com/31741601/r/il/9e8c9e/4905872263/il_fullxfull.4905872263_8m9h.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 2,
+        "fields": {
+            "nombre": "Poster Zodiac Academy",
+            "tipo": "Poster",
+            "categoria": 4,
+            "precio": 12990,
+            "imagen": "https://images-na.ssl-images-amazon.com/images/I/71z0n4NBGNL._AC_SL1500_.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 3,
+        "fields": {
+            "nombre": "Coleccionable Vampire Book Miniature",
+            "tipo": "Coleccionable",
+            "categoria": 3,
+            "precio": 24990,
+            "imagen": "https://cdn.shopify.com/s/files/1/0661/9630/0116/products/vampire-miniature_1024x1024.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 4,
+        "fields": {
+            "nombre": "Sticker Pack Hombres Lobo",
+            "tipo": "Sticker",
+            "categoria": 4,
+            "precio": 5990,
+            "imagen": "https://i.etsystatic.com/20352412/r/il/fe1e72/3251260976/il_1140xN.3251260976_bqeb.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 5,
+        "fields": {
+            "nombre": "Disfraz de Bruja Hechizada",
+            "tipo": "Disfraz",
+            "categoria": 2,
+            "precio": 45990,
+            "imagen": "https://cdn.shopify.com/s/files/1/0151/5509/6796/products/witch-costume.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 6,
+        "fields": {
+            "nombre": "Poster Quicksilver",
+            "tipo": "Poster",
+            "categoria": 4,
+            "precio": 13990,
+            "imagen": "https://images-na.ssl-images-amazon.com/images/I/91ZcPj3fH9L._AC_SL1500_.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 7,
+        "fields": {
+            "nombre": "Coleccionable Dragón de Fourth Wing",
+            "tipo": "Coleccionable",
+            "categoria": 3,
+            "precio": 34990,
+            "imagen": "https://cdn.shopify.com/s/files/1/0286/8546/1463/products/dragon-figurine.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 8,
+        "fields": {
+            "nombre": "Sticker Pack ACOTAR",
+            "tipo": "Sticker",
+            "categoria": 4,
+            "precio": 6990,
+            "imagen": "https://i.etsystatic.com/22187495/r/il/17e2b0/3581796333/il_1140xN.3581796333_n71b.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 9,
+        "fields": {
+            "nombre": "Disfraz Feyre ACOTAR",
+            "tipo": "Disfraz",
+            "categoria": 2,
+            "precio": 52990,
+            "imagen": "https://cdn.shopify.com/s/files/1/0090/7034/products/feyre-costume.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 10,
+        "fields": {
+            "nombre": "Coleccionable Anathema",
+            "tipo": "Coleccionable",
+            "categoria": 3,
+            "precio": 29990,
+            "imagen": "https://cdn.shopify.com/s/files/1/0256/4573/products/anathema-figurine.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 11,
+        "fields": {
+            "nombre": "Poster Hechizada",
+            "tipo": "Poster",
+            "categoria": 4,
+            "precio": 11990,
+            "imagen": "https://images-na.ssl-images-amazon.com/images/I/81C4h6s7TaL._AC_SL1500_.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    },
+    {
+        "model": "reads.producto",
+        "pk": 12,
+        "fields": {
+            "nombre": "Disfraz King of Wrath",
+            "tipo": "Disfraz",
+            "categoria": 2,
+            "precio": 48990,
+            "imagen": "https://cdn.shopify.com/s/files/1/0027/0195/6996/products/king-costume.jpg",
+            "fecha_creacion": "2025-09-26"
+        }
+    }
+]

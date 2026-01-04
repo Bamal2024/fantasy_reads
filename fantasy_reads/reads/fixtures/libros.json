@@ -1,0 +1,146 @@
+[
+    {
+        "model": "reads.libro",
+        "pk": 1,
+        "fields": {
+            "titulo": "Fourth Wing",
+            "nombre_autor": "Rebecca Yarros",
+            "saga": true,
+            "sinopsis": "Una guerra, un dragón y una heroína inesperada.",
+            "portada": "reads/images/fourth-wing-cover.jpeg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/61431922-fourth-wing"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 2,
+        "fields": {
+            "titulo": "Zodiac Academy",
+            "nombre_autor": "Caroline Peckham",
+            "saga": true,
+            "sinopsis": "Dos hermanas y una escuela de élite para criaturas mágicas.",
+            "portada": "reads/images/zodiac-academy-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/46261182-the-awakening"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 3,
+        "fields": {
+            "titulo": "The Love Hypothesis",
+            "nombre_autor": "Ali Hazelwood",
+            "saga": true,
+            "sinopsis": "Una científica, un falso romance y muchas mariposas.",
+            "portada": "reads/images/the-love-hypothesis-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/56732449-the-love-hypothesis"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 4,
+        "fields": {
+            "titulo": "Una corte de rosas y espinas",
+            "nombre_autor": "Sarah J. Maas",
+            "saga": true,
+            "sinopsis": "Feyre, una cazadora humana, se adentra en un mundo de fae peligrosos y encantadores.",
+            "portada": "reads/images/acotar-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/50659467-a-court-of-thorns-and-roses"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 5,
+        "fields": {
+            "titulo": "Nocticadia",
+            "nombre_autor": "Andrea Izquierdo",
+            "saga": true,
+            "sinopsis": "Una universidad oculta entre sombras y criaturas sobrenaturales, donde nada es lo que parece.",
+            "portada": "reads/images/nocticadia-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/136470356-nocticadia"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 6,
+        "fields": {
+            "titulo": "Quicksilver",
+            "nombre_autor": "Callie Hart",
+            "saga": true,
+            "sinopsis": "Una historia intensa de pasión, oscuridad y redención, donde el amor y la venganza se entrelazan peligrosamente.",
+            "portada": "reads/images/quicksilver-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/217536270-quicksilver"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 7,
+        "fields": {
+            "titulo": "El Vals de la Bruja",
+            "nombre_autor": "Belén Martínez",
+            "saga": true,
+            "sinopsis": "Brujas, maldiciones y un vals que marca el destino en una novela de fantasía gótica con romance y misterio.",
+            "portada": "reads/images/vals-bruja-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/58508419-el-vals-de-la-bruja"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 8,
+        "fields": {
+            "titulo": "Feathers So Vicious",
+            "nombre_autor": "Liv Zander",
+            "saga": true,
+            "sinopsis": "Una fábula oscura donde monstruos alados, deseo y peligro se cruzan en una historia salvajemente adictiva.",
+            "portada": "reads/images/feathers-so-vicious-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/192705098-feathers-so-vicious"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 9,
+        "fields": {
+            "titulo": "Anathema",
+            "nombre_autor": "Keri Lake",
+            "saga": true,
+            "sinopsis": "En un mundo postapocalíptico, una joven marcada por la oscuridad lucha por sobrevivir y amar a su peor enemigo.",
+            "portada": "reads/images/anathema-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/209741142-anathema"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 10,
+        "fields": {
+            "titulo": "Hechizada",
+            "nombre_autor": "Laura Thalassa",
+            "saga": true,
+            "sinopsis": "Una joven maldita se convierte en prisionera del Rey de las Hadas. Oscuridad, deseo y magia antigua se mezclan.",
+            "portada": "reads/images/hechizada-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/198973377-hechizada"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 11,
+        "fields": {
+            "titulo": "King of Wrath",
+            "nombre_autor": "Ana Huang",
+            "saga": true,
+            "sinopsis": "Un matrimonio arreglado entre un magnate frío y una mujer desafiante. Juegos de poder, tensión sexual y secretos que pueden destruirlo todo.",
+            "portada": "reads/images/king-of-wrath-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/217206738-king-of-wrath"
+        }
+    },
+    {
+        "model": "reads.libro",
+        "pk": 12,
+        "fields": {
+            "titulo": "A Touch of Darkness",
+            "nombre_autor": "Scarlett St. Clair",
+            "saga": true,
+            "sinopsis": "Perséfone es una diosa de la primavera en un mundo moderno... hasta que firma un contrato con Hades. Oscuridad, deseo y mitología griega reinventada.",
+            "portada": "reads/images/touch-of-darkness-cover.jpg",
+            "linkGoodreads": "https://www.goodreads.com/book/show/43175155-a-touch-of-darkness"
+        }
+    }
+]

@@ -1,0 +1,24 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}Detalle Categoría{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'reads/css/admin_custom.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Detalle de la Categoría</h1>
+
+<div class="dashboard-cards">
+    <div class="card card-categorias">
+        <div class="icon"><i class="fas fa-tags"></i></div>
+        <h3>{{ categoria.nombre }}</h3>
+        <p class="count">ID: {{ categoria.id }}</p>
+        <p>Descripción: {{ categoria.descripcion }}</p>
+    </div>
+</div>
+
+<a href="{% url 'categoria_list' %}" class="button-link">Volver a Categorías</a>
+<a href="{% url 'admin:index' %}" class="button-link">Volver a Admin</a>
+{% endblock %}

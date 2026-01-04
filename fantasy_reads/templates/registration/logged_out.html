@@ -1,0 +1,9 @@
+{% extends 'reads/base.html' %}
+
+{% block content %}
+<div class="bienvenida-card">
+    <h2>Sesión finalizada</h2>
+    <p>Has cerrado sesión correctamente.</p>
+    <a href="{% url 'login' %}" class="button-link">Volver a iniciar sesión</a>
+</div>
+{% endblock %}

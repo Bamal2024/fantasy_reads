@@ -1,0 +1,37 @@
+{% extends "admin/base_site.html" %}
+{% block title %}Productos{% endblock %}
+
+{% block content %}
+<h1>Lista de Productos</h1>
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Descuento</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %}
+        <tr>
+            <td>{{ producto.id }}</td>
+            <td><a href="{% url 'producto-detail' producto.id %}">{{ producto.nombre }}</a></td>
+            <td>{{ producto.tipo }}</td>
+            <td>{{ producto.categoria.nombre }}</td>
+            <td>{{ producto.precio }}</td>
+            <td>{{ producto.descuento }}</td>
+            <td>{{ producto.stock }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="7">No hay productos registrados.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

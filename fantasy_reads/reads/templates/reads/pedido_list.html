@@ -1,0 +1,32 @@
+{% extends "admin/base_site.html" %}
+{% block title %}Pedidos{% endblock %}
+
+{% block content %}
+<h1>Lista de Pedidos</h1>
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Fecha Pedido</th>
+            <th>Estado</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pedido in pedidos %}
+        <tr>
+            <td><a href="{% url 'pedido-detail' pedido.id %}">{{ pedido.id }}</a></td>
+            <td>{{ pedido.cliente.nombre }} {{ pedido.cliente.apellido }}</td>
+            <td>{{ pedido.fecha_pedido }}</td>
+            <td>{{ pedido.estado }}</td>
+            <td>{{ pedido.total }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No hay pedidos registrados.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

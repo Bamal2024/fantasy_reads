@@ -1,0 +1,49 @@
+/* Estilos del formulario de contacto */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, .06);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .4);
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    color: #fbeaff;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    margin-top: .5rem;
+    padding: .8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, .9);
+    color: #1e0e18;
+}
+
+form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 1rem;
+}
+
+.mensaje-exito {
+    text-align: center;
+    font-weight: bold;
+    color: #ffcc00;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(90, 42, 131, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: block;
+}

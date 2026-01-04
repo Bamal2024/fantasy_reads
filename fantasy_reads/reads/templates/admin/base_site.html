@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}Fantasy Reads | Admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">Romance y Fantasía</a>
+</h1>
+{% endblock %}
+
+{% block extrastyle %}
+<!-- Carga tu CSS personalizado para todo el admin -->
+<link rel="stylesheet" type="text/css" href="{% static 'reads/css/admin_custom.css' %}">
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block content %}
+{{ block.super }}
+{% endblock %}

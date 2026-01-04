@@ -1,0 +1,27 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}Detalle Cliente{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'reads/css/admin_custom.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Detalle del Cliente</h1>
+
+<div class="dashboard-cards">
+    <div class="card card-clientes">
+        <div class="icon"><i class="fas fa-user"></i></div>
+        <h3>{{ cliente.nombre }} {{ cliente.apellido }}</h3>
+        <p class="count">ID: {{ cliente.id }}</p>
+        <p>Email: {{ cliente.email }}</p>
+        <p>Teléfono: {{ cliente.telefono }}</p>
+        <p>Fecha de registro: {{ cliente.fecha_registro }}</p>
+    </div>
+</div>
+
+<a href="{% url 'cliente-list' %}" class="button-link">Volver a Clientes</a>
+<a href="{% url 'admin:index' %}" class="button-link">Volver a Admin</a>
+
+{% endblock %}

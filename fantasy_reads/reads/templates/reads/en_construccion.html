@@ -1,0 +1,12 @@
+{% extends "reads/base.html" %}
+
+{% block title %}Función en Construcción{% endblock %}
+
+{% block content %}
+<div class="card bienvenida-card" style="max-width:600px; margin: 50px auto; text-align:center; padding:30px;">
+    <h2>¡Estamos trabajando en esto!</h2>
+    <p>La función de compra aún se encuentra en construcción. Por ahora, puedes seguir explorando nuestros libros y productos.</p>
+    <a href="{% url 'libro_list' %}" class="button-link" style="margin-top:20px;">Volver a Libros</a>
+    <a href="{% url 'merchandising' %}" class="button-link" style="margin-top:20px;">Volver a Merchandising</a>
+</div>
+{% endblock %}

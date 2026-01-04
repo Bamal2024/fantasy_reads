@@ -1,0 +1,401 @@
+/* ===============================
+   Listado de libros
+   =============================== */
+.libros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    list-style: none;
+    margin: 0;
+}
+
+.libro-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, .06);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .4);
+    transition: transform .3s ease;
+}
+
+.libro-card:hover {
+    transform: scale(1.03);
+}
+
+.libro-link {
+    color: inherit;
+    display: inline-block;
+}
+
+.libro-link:hover h3 {
+    color: var(--lila);
+    text-shadow: 0 0 8px var(--rosa-1);
+}
+
+.libro-portada {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.libro-link:hover .libro-portada {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px var(--lila);
+}
+
+h3 {
+    margin: .5rem 0 .3rem;
+    font-size: 1.1rem;
+    color: #fcdfff;
+}
+
+/* ===============================
+   Contador / seleccionados
+   =============================== */
+.contador-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.seleccionados {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #473153;
+    border-top: 2px solid hotpink;
+}
+
+.seleccionados h2 {
+    color: hotpink;
+}
+
+.seleccionados ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seleccionados li {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.mini-portada {
+    width: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ===============================
+   Botones
+   =============================== */
+button {
+    background-color: #ffb3c1;
+    border: none;
+    border-radius: 12px;
+    padding: .6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .3s ease, border-color .25s;
+}
+
+button:hover {
+    background-color: #ff7096;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ===============================
+   Card de producto
+   =============================== */
+.product-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, .06);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.product-card .product-image img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.product-card .product-info {
+    flex: 1;
+}
+
+.product-card .product-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.button-link {
+    padding: 8px 14px;
+    background-color: #8e24aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.button-link:hover {
+    background-color: #ab47bc;
+}
+
+/* ===============================
+   Bienvenida
+   =============================== */
+.bienvenida {
+    text-align: center;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.bienvenida-card {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    color: #fdfdfd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.bienvenida-card h2 {
+    font-size: 2rem;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.bienvenida-card p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.btn-explorar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #9b59b6;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explorar:hover {
+    background-color: #ab47bc;
+}
+
+.bienvenida .button-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    background-color: #8e24aa;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.bienvenida .button-link:hover {
+    background-color: #ab47bc;
+}
+
+/* ===============================
+   Paginación
+   =============================== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #8e24aa;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #ab47bc;
+}
+
+.pagination .current {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ===============================
+   Grid de productos
+   =============================== */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* ===============================
+   Producto compacto
+   =============================== */
+.producto-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 250px;
+    height: 140px;
+    background-color: #6a1b9a;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    gap: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.producto-card img {
+    width: 80px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto-card .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+}
+
+.producto-card p {
+    font-size: 0.85rem;
+    margin: 2px 0;
+}
+
+.producto-card .button-group {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.producto-card .button-link {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+}
+
+/* ===============================
+   Botón sugerencia
+   =============================== */
+.btn-sugerencia {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #9b59b6, #ff69b4);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-sugerencia:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #ff69b4, #9b59b6);
+}
+
+/* ===============================
+   Ratings
+   =============================== */
+.rating-stars,
+.rating-ajies {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0 16px 0;
+}
+
+.rating-stars label,
+.rating-ajies label {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.rating-stars input[type="radio"],
+.rating-ajies input[type="radio"] {
+    margin-right: 4px;
+}
+
+.user-greeting {
+    text-align: right;
+    padding: 8px 20px;
+    font-size: 0.95rem;
+    color: #fcdfff;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

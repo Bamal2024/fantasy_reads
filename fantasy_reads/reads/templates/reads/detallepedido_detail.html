@@ -1,0 +1,26 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}Detalle DetallePedido{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'reads/css/admin_custom.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Detalle del DetallePedido</h1>
+
+<div class="dashboard-cards">
+    <div class="card card-pedidos">
+        <div class="icon"><i class="fas fa-shopping-basket"></i></div>
+        <h3>DetallePedido #{{ detallepedido.id }}</h3>
+        <p class="count">Pedido: {{ detallepedido.pedido.id }}</p>
+        <p>Producto: {{ detallepedido.producto.nombre }}</p>
+        <p>Cantidad: {{ detallepedido.cantidad }}</p>
+        <p>Precio: ${{ detallepedido.precio }}</p>
+    </div>
+</div>
+
+<a href="{% url 'detallepedido-list' %}" class="button-link">Volver a Detalles de Pedido</a>
+<a href="{% url 'admin:index' %}" class="button-link">Volver a Admin</a>
+{% endblock %}

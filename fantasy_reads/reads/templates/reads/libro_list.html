@@ -1,0 +1,59 @@
+{% extends "reads/base.html" %}
+{% load static %}
+
+{% block title %}Libros Disponibles{% endblock %}
+
+{% block content %}
+<h1>Libros Disponibles</h1>
+
+<div class="libros-grid">
+    {% for libro in page_obj %}
+    <div class="libro-card">
+        <a href="{% url 'libro_detalle' libro.id %}">
+            {% if libro.portada %}
+                <img src="{{ libro.portada.url }}" alt="{{ libro.titulo }}">
+            {% else %}
+                <p>Imagen no disponible</p>
+            {% endif %}
+            <h3>{{ libro.titulo }}</h3>
+            <p>Autor: {{ libro.nombre_autor }}</p>
+            <p>Saga: {{ libro.saga|yesno:"Sí,No" }}</p>
+            <p>{{ libro.sinopsis|truncatewords:25 }}</p>
+            <a href="{{ libro.linkGoodreads }}" target="_blank">Ver en Goodreads</a>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% if user.is_authenticated %}
+  <div class="text-center mb-5">
+    <a href="{% url 'libro_add' %}" class="btn-sugerencia">
+      ¡Agrega tu sugerencia de lectura!
+    </a>
+  </div>
+{% else %}
+  <div class="text-center mb-5">
+    <a href="{% url 'login' %}" class="btn-sugerencia btn-secundario">
+      Ingresa para agregar tu sugerencia de lectura
+    </a>
+  </div>
+{% endif %}
+
+{% block pagination %}
+{% if is_paginated %}
+<div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; Primera</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+    {% endif %}
+
+    <span class="current">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">Última &raquo;</a>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% endblock %}

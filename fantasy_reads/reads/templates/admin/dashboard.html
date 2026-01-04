@@ -1,0 +1,60 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'reads/css/admin_custom.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+{% endblock %}
+
+{% block content %}
+<h1>Dashboard de totales</h1>
+
+<div class="dashboard-cards">
+    <a href="{% url 'admin:reads_cliente_changelist' %}" class="card card-clientes">
+        <div class="icon"><i class="fas fa-user"></i></div>
+        <h3>Clientes</h3>
+        <p class="count">{{ total_clientes }}</p>
+    </a>
+
+    <a href="{% url 'admin:reads_producto_changelist' %}" class="card card-productos">
+        <div class="icon"><i class="fas fa-box-open"></i></div>
+        <h3>Productos</h3>
+        <p class="count">{{ total_productos }}</p>
+    </a>
+
+    <a href="{% url 'admin:reads_categoria_changelist' %}" class="card card-categorias">
+        <div class="icon"><i class="fas fa-tags"></i></div>
+        <h3>Categorías</h3>
+        <p class="count">{{ total_categorias }}</p>
+    </a>
+
+    <a href="{% url 'admin:reads_pedido_changelist' %}" class="card card-pedidos">
+        <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+        <h3>Pedidos</h3>
+        <p class="count">{{ total_pedidos }}</p>
+    </a>
+
+    <a href="{% url 'admin:reads_libro_changelist' %}" class="card card-libros">
+        <div class="icon"><i class="fas fa-book"></i></div>
+        <h3>Libros</h3>
+        <p class="count">{{ total_libros }}</p>
+    </a>
+    <a href="{% url 'admin:reads_contacto_changelist' %}" class="card card-contactos">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <h3>Contactos</h3>
+        <p class="count">{{ total_contactos }}</p>
+    </a>
+</div>
+
+<!-- Botón volver a admin -->
+<p style="text-align:center; margin-top: 30px;">
+    <p style="text-align:center; margin-top: 30px; display:flex; justify-content:center; gap:15px;">
+    <a href="{% url 'admin:index' %}" class="button-link">Volver a Admin</a>
+    <a href="{% url 'index' %}" class="button-link">Volver al Sitio</a>
+</p>
+</p>
+
+{{ block.super }}
+{% endblock %}

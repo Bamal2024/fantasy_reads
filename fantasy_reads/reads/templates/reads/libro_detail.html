@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Libros{% endblock %}
+
+{% block content %}
+<h1>Lista de Libros</h1>
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Saga</th>
+            <th>Fecha Publicación</th>
+            <th>Categoría</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for libro in libros %}
+        <tr>
+            <td>{{ libro.id }}</td>
+            <!-- Aquí está el link al detalle -->
+            <td>
+                <a href="{% url 'libro-detail' libro.id %}">{{ libro.titulo }}</a>
+            </td>
+            <td>{{ libro.nombre_autor }}</td>
+            <td>{{ libro.saga }}</td>
+            <td>{{ libro.fecha_publicacion }}</td>
+            <td>{{ libro.categoria.nombre }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No hay libros registrados.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

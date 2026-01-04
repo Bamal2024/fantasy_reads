@@ -1,0 +1,21 @@
+{% extends "reads/base.html" %}
+{% load static %}
+
+{% block title %}Inicio — Fantasy Reads{% endblock %}
+
+{% block content %}
+<div class="bienvenida-card">
+    <h2>¡Bienvenid@ a Fantasy Reads!</h2>
+    <p>
+        Aquí celebramos nuestra pasión por la lectura y nos sumergimos en mundos que solo existen en nuestra imaginación. Cada página que recorres te transporta a aventuras, romances y universos mágicos, y como comunidad, compartimos esa emoción junt@s.
+    </p>
+    <p>
+        Formas parte de nuestra <strong>comunidad lectora</strong> de novelas de romance fantasioso, un espacio donde cada historia inspira, cada libro despierta sentimientos y cada recomendación se comparte con cariño.
+    </p>
+    <p>
+        Siéntete libre de explorar, descubrir nuevos títulos y dejarte llevar por la magia de la lectura. Nos alegra que estés aquí: ¡tu pasión por leer te hace parte de nuestra familia literaria!
+    </p>
+    <a href="{% url 'libro_list' %}" class="btn-explorar">Explora nuestros libros disponibles</a>
+</div>
+{% endblock %}
+

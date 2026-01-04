@@ -1,0 +1,127 @@
+/* ================================
+   Colores y tipografías base
+   ================================ */
+:root {
+    --violeta: #5a2a83;
+    --rosa-1: #ffb3ec;
+    --lila: #c77dff;
+    --texto: #f8f0ff;
+
+    /* Tipografías */
+    --fuente-titulo: 'Cinzel Decorative', Georgia, serif;
+    --fuente-subtitulo: 'Playfair Display', Georgia, serif;
+    --fuente-texto: 'Quicksand', 'Nunito', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--texto);
+    background: linear-gradient(135deg, #3b0a2a, #1e0e18);
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+/* ================================
+   Encabezados
+   ================================ */
+h1,
+h2,
+h3 {
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.2rem;
+    color: var(--violeta);
+}
+
+h2 {
+    font-family: var(--fuente-subtitulo);
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: #fbeaff;
+}
+
+h3 {
+    font-family: var(--fuente-subtitulo);
+    font-size: 1.5rem;
+    color: var(--rosa-1);
+}
+
+/* ================================
+   Texto y enlaces
+   ================================ */
+p,
+li,
+span {
+    font-family: var(--fuente-texto);
+    margin: .3rem 0;
+    font-size: 1rem;
+    color: #f1d7ff;
+}
+
+a {
+    font-family: var(--fuente-texto);
+    text-decoration: none;
+    font-weight: 600;
+    color: #d7a6ff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* ================================
+   Imágenes
+   ================================ */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* ================================
+   Estilo para cards (libros, productos, etc.)
+   ================================ */
+.card {
+    background: rgba(90, 42, 131, 0.2);
+    border: 1px solid rgba(255, 179, 236, 0.3);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+    font-family: var(--fuente-subtitulo);
+    margin-bottom: 0.5rem;
+    color: var(--rosa-1);
+}
+
+.card p {
+    font-family: var(--fuente-texto);
+    font-size: 0.95rem;
+    color: #f5e1ff;
+}

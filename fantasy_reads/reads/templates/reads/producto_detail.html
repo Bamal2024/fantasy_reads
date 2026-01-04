@@ -1,0 +1,41 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}Detalle Producto{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'reads/css/components.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Detalle del Producto</h1>
+
+<div class="product-card">
+    <div class="product-image">
+        {% if producto.imagen %}
+            <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+        {% else %}
+            <img src="{% static 'reads/images/no-image.png' %}" alt="Sin imagen disponible">
+        {% endif %}
+    </div>
+    <div class="product-info">
+        <h3>{{ producto.nombre }}</h3>
+        <p class="count">ID: {{ producto.id }}</p>
+        <p>Tipo: {{ producto.tipo }}</p>
+        <p>Categoría: {{ producto.categoria }}</p>
+        <p>Precio: ${{ producto.precio }}</p>
+        <p>Descripción: {{ producto.descripcion }}</p>
+        <p>Descuento: {{ producto.descuento }}%</p>
+        <p>Stock: {{ producto.stock }}</p>
+    </div>
+</div>
+
+<div class="button-group">
+    <a href="{% url 'en_construccion' %}" class="button-link">Comprar</a>
+    <a href="{% url 'merchandising' %}" class="button-link">Volver a Productos</a>
+    <a href="{% url 'index' %}" class="button-link">Volver al sitio </a>
+    <a href="{% url 'admin:index' %}" class="button-link">Ir al Admin</a>
+
+</div>
+
+{% endblock %}

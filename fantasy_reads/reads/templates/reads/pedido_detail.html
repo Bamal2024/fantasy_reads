@@ -1,0 +1,26 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}Detalle Pedido{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'reads/css/admin_custom.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Detalle del Pedido</h1>
+
+<div class="dashboard-cards">
+    <div class="card card-pedidos">
+        <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+        <h3>Pedido #{{ pedido.id }}</h3>
+        <p class="count">Cliente: {{ pedido.cliente }}</p>
+        <p>Fecha: {{ pedido.fecha_pedido }}</p>
+        <p>Estado: {{ pedido.estado }}</p>
+        <p>Total: ${{ pedido.total }}</p>
+    </div>
+</div>
+
+<a href="{% url 'pedido-list' %}" class="button-link">Volver a Pedidos</a>
+<a href="{% url 'admin:index' %}" class="button-link">Volver a Admin</a>
+{% endblock %}

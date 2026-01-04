@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}Panel de Administración | Fantasy Reads{% endblock %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'reads/css/admin_custom.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Bienvenido al Panel de Administración</h1>
+
+<p>Desde aquí puedes gestionar todos tus modelos registrados.</p>
+
+<!-- Link al dashboard -->
+<p>
+    <a href="{% url 'dashboard' %}" class="button-link">
+        Ir al Dashboard
+    </a>
+</p>
+
+<hr>
+
+{{ block.super }}  <!-- Mantiene el contenido normal del admin -->
+{% endblock %}
