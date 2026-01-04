@@ -1,6 +1,8 @@
 # Python
 __pycache__/
 *.py[cod]
+*.pyc
+.env
 
 # Django
 db.sqlite3
@@ -12,3 +14,6 @@ venv/
 
 # OS
 .DS_Store
+
+
+

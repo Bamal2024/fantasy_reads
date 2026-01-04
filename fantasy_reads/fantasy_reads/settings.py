@@ -2,14 +2,36 @@
 Django settings for fantasy_reads project.
 """
 
+import os
 from pathlib import Path
+from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Seguridad
-SECRET_KEY = 'django-insecure-4ob#*z+tqj%0n65=t*s2&q*=6=i=07y*5c$)2^38@-j4fv9^aw'
-DEBUG = True
-ALLOWED_HOSTS = []
+
+# Helper para obtener variables de entorno obligatorias
+def get_env_variable(var_name: str) -> str:
+    """Obtiene la variable de entorno o lanza ImproperlyConfigured si falta."""
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        raise ImproperlyConfigured(f"La variable de entorno '{var_name}' no está definida. Defínela y reinicia la aplicación.")
+
+# SECRET_KEY obligatoria (no debe existir hardcodeada)
+SECRET_KEY = get_env_variable('SECRET_KEY')
+
+# DEBUG depende de variable de entorno (por defecto False si no está definida)
+DEBUG = os.environ.get('DEBUG', 'False').lower() in ('1', 'true', 'yes')
+
+# Configuración de ALLOWED_HOSTS para Render
+# Render provee RENDER_EXTERNAL_HOSTNAME en el entorno de ejecución.
+render_host = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if render_host:
+    ALLOWED_HOSTS = [render_host, 'localhost', '127.0.0.1']
+else:
+    # Entorno local o sin host de Render: restringir a localhost por defecto
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Aplicaciones instaladas
 INSTALLED_APPS = [
@@ -95,8 +117,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# API key para Google Books
-GOOGLE_BOOKS_API_KEY = "AIzaSyAcu0_TnkFes8XxMOUGJm4EyYIWwKmpnS0"
+# API key para Google Books (obligatoria en variables de entorno)
+GOOGLE_BOOKS_API_KEY = get_env_variable('GOOGLE_BOOKS_API_KEY')
 
 #redirecciona al index luego del login y logout
 LOGIN_REDIRECT_URL = 'index'
