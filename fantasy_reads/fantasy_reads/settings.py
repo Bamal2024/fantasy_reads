@@ -123,3 +123,6 @@ GOOGLE_BOOKS_API_KEY = get_env_variable('GOOGLE_BOOKS_API_KEY')
 #redirecciona al index luego del login y logout
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
+from pathlib import Path
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
